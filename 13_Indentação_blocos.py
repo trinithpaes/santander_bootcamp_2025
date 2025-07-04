@@ -11,4 +11,4 @@ def depositar(valor):
     saldo = 500
     saldo += valor
 
-sacar(1000)
+sacar(400)
