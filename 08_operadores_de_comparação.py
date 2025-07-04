@@ -8,7 +8,7 @@ saldo = 450
 saque = 200
 print (saldo != saque)
 
-#Maior que / menor ou igual
+# Maior que / menor ou igual
 saldo = 450
 saque = 200
 print (saldo < saque)
