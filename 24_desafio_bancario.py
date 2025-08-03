@@ -51,7 +51,7 @@ while True:
         elif valor > 0:
             saldo -= valor
             data_hora = datetime.now().strftime("%d/%m/%Y %H:%M:%S") # Adicionado para registrar data/hora
-            extrato += f"Saque: R$ {valor:.2f} em em {data_hora}\n" # Adicionado para registrar data/hora
+            extrato += f"Saque: R$ {valor:.2f} em {data_hora}\n" # Adicionado para registrar data/hora
             numero_saques += 1
 
         else:
