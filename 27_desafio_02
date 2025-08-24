@@ -1,5 +1,5 @@
 import textwrap
-
+from datetime import datetime
 
 def menu():
     menu = """\n
@@ -18,7 +18,8 @@ def menu():
 def depositar(saldo, valor, extrato, /):
     if valor > 0:
         saldo += valor
-        extrato += f"Depósito:\tR$ {valor:.2f}\n"
+        horario = datetime.now().strftime("%d/%m/%Y %H:%M:%S")
+        extrato += f"Depósito:\tR$ {valor:.2f}\t[{horario}]\n"
         print("\n=== Depósito realizado com sucesso! ===")
     else:
         print("\n@@@ Operação falhou! O valor informado é inválido. @@@")
@@ -42,7 +43,8 @@ def sacar(*, saldo, valor, extrato, limite, numero_saques, limite_saques):
 
     elif valor > 0:
         saldo -= valor
-        extrato += f"Saque:\t\tR$ {valor:.2f}\n"
+        horario = datetime.now().strftime("%d/%m/%Y %H:%M:%S") # Data e hora
+        extrato += f"Saque:\t\tR$ {valor:.2f}\t[{horario}]\n"
         numero_saques += 1
         print("\n=== Saque realizado com sucesso! ===")
 
